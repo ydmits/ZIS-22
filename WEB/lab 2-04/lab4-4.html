@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        
+    </head>
+    <body>
+        <button onclick="manipulateString()">Ввод строки</button>
+        <p id="originalString"></p>
+        <p id="modifiedString"></p>
+        <script>
+            function manipulateString() {
+
+            let str = prompt("Введите строку:");
+            if (str === null || str === "") {
+            alert("Строка не введена");
+            return;
+        }
+
+
+        document.getElementById('originalString').textContent = "Введена строка: " + str;
+
+
+        function shuffleWord(word) {
+            if (word.length <= 3) {
+                return word;
+            }
+        
+        let middle = word.slice(1, -1).split('');
+        for (let i = middle.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [middle[i], middle[j]] = [middle[j], middle[i]];
+        }
+        
+        return word[0] + middle.join('') + word[word.length - 1];
+    }
+
+
+    let modifiedStr = str.split(' ').map(shuffleWord).join(' ');
+
+
+    document.getElementById('modifiedString').textContent = "Измененная строка: " + modifiedStr;
+}
+
+        </script>
+    </body>
+</html>

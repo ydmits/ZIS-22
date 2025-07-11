@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Условный оператор IF</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.write("<center>Использование оператора<b>IF</b></center>");
+            age = 24;
+            if (age < 18) document.write("Слишком молоды");
+            age = 10;
+            if (age < 18) document.write("Слишком молоды");
+            document.write("<center>Использование оператора<b>IF</b> с блоком <b>ELSE</b></center>");
+            s = "плохо";
+            if (s=="хорошо") document.write("Хорошее настроеение");
+            else document.write("Мне ", s);
+            document.write("<center>Использование оператора<b>IF</b> с блоком <b>ELSE</b> и <b>ELSEIF</b></center>");
+            if (s == "хорошо") { document.write("Хорошее настроение"); }
+            else if (s == "плохо") {document.write("Не отчаивайтесь");}
+            else {document.write("Просто ", s);}
+        </script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+            }
+            label {
+                margin: 10px 0 5px;
+            }
+            input[type="number"], input[type="text"] {
+                padding: 5px;
+                font-size: 16px;
+            }
+            button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Введите зарплату</h1>
+        <form id="salaryForm">
+            <label for="january">Январь</label>
+            <input type="number" id="january" name="january" required>
+    
+            <label for="february">Февраль</label>
+            <input type="number" id="february" name="february" required>
+    
+            <label for="march">Март</label>
+            <input type="number" id="march" name="march" required>
+    
+            <label for="april">Апрель</label>
+            <input type="number" id="april" name="april" required>
+    
+            <label for="may">Май</label>
+            <input type="number" id="may" name="may" required>
+    
+            <label for="june">Июнь</label>
+            <input type="number" id="june" name="june" required>
+    
+            <button type="button" onclick="calculateAverageSalary()">Вычислить</button>
+    
+            <label for="averageSalary">Средняя зарплата</label>
+            <input type="text" id="averageSalary" name="averageSalary" readonly>
+        </form>
+    
+        <script>
+            function calculateAverageSalary() {
+                const form = document.getElementById('salaryForm');
+                let totalSalary = 0;
+                let months = 6;
+    
+                for (let i = 0; i < form.elements.length; i++) {
+                    if (form.elements[i].type === 'number') {
+                        totalSalary += parseFloat(form.elements[i].value) || 0;
+                    }
+                }
+    
+                let averageSalary = totalSalary / months;
+                document.getElementById('averageSalary').value = averageSalary.toFixed(2);
+            }
+        </script>
+    </body>
+</html>

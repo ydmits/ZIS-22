@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        <script lang="JavaScript">
+          function openW4(){
+            var inf = "";
+            myWin = open("", "displayWindow", "width=400, height=300, status=no, toolbar=no, menubar=no");
+            myWin.document.open();
+            myWin.document.write("<html><head><title>Dynamic generate HTML page</title>");
+              myWin.document.write("<META HTTP-EQIV='Content-Type' CONTEXT='text/html;");
+              myWin.document.write("charset=windows-1251'></head><body>");
+                inf = inf + "<ul><li><b>Name:</b>" + document.myform.yourname.value;
+                  inf= inf + "<ul><li><b>Adress:</b>" + document.myform.youraddr.value;
+                    inf = inf + "<ul><li><b>Name:</b>" + document.myform.yourphone.value +"</ul>";
+                      myWin.document.write(inf);
+                      myWin.document.write("</body></html>");
+                      myWin.document.close()
+          }
+        </script>
+    </head>
+    <body>        
+      <form name="myform">
+        <p><strong>Name:</strong><input type="text" maxlength="20" name="yourname"></p>
+        <p><strong>Adr:</strong><input type="text" maxlength="20" name="youraddr"></p>
+        <p><strong>Phone:</strong><input type="text" maxlength="20" name="yourphone"></p>
+        <p> <input type="button" value="dynamic generate HTML page" onclick="openW4()"></p>
+      </form>
+    </body>
+</html>

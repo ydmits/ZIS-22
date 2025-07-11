@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>qwery</title>
+    </head>
+    <body>
+        <script>
+            // исправленные комментарии для скрипта на javascript
+        
+            document.write("<center>использование оператора цикла <b>for</b></center>");
+        
+            // исправлены parseint на parseInt
+            // добавлено var перед x, y, i для объявления переменных
+            var x = parseInt(prompt("введи x"));
+            var y = parseInt(prompt("введи y"));
+            var z = x;
+        
+            for (var i = 2; i <= Math.abs(y); i++) {
+                z = z * x;
+            }
+            // исправлен оператор тернарного условия
+            z = (y > 0) ? z : 1/z;
+            document.write("число ", x, " в степени ", y, " равно ", z);
+            document.write("<p><center>использование оператора цикла <b>while</b></center>");
+        
+            var z1 = x;
+            var i = 2;
+            while (i <= Math.abs(y)){
+                z1 = z1 * x;
+                i++;
+            }
+            // исправлен оператор тернарного условия
+            z1 = (y > 0) ? z1 : 1/z1;
+        
+            document.write("число ", x, " в степени ", y, " равно ", z1);
+            
+            document.write("<p><center>использование оператора цикла <b>do while</b></center>");
+        
+            var z2 = x;
+            var i = 2;
+            do {
+                z2 = z2 * x;
+                i++;
+            } while (i <= Math.abs(y));
+            // исправлен оператор тернарного условия
+            z2 = (y > 0) ? z2 : 1/z2;
+        
+            document.write("число ", x, " в степени ", y, " равно ", z2);
+        </script>
+    </body>
+</html>

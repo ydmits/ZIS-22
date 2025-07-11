@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        
+    </head>
+    <body>
+    <button onclick="manipulateString()">Ввести строку</button>
+    <p id="originalString"></p>
+    <p id="modifiedString"></p>
+    <p id="shortWordsCount"></p>
+    <script>
+        function manipulateString() {
+    let str = prompt("Введите строку:");
+    if (str === null || str === "") {
+        alert("Строка не введена");
+        return;
+    }
+
+    document.getElementById('originalString').textContent = "Введена строка: " + str;
+
+
+    let words = str.split(/\s+/);
+
+
+    let shortWordsCount = words.filter(word => word.length < 3).length;
+
+    if (words.length > 1) {
+        let modifiedStr = words[0] + ' ' + words[1];
+        for (let i = 2; i < words.length; i++) {
+            modifiedStr += words[i];
+        }
+        document.getElementById('modifiedString').textContent = "Измененная строка: " + modifiedStr;
+    } else {
+        document.getElementById('modifiedString').textContent = "Измененная строка: " + words[0];
+    }
+
+    document.getElementById('shortWordsCount').textContent = "Количество слов длиной меньше 3 символов: " + shortWordsCount;
+}
+
+    </script>
+    </body>
+</html>

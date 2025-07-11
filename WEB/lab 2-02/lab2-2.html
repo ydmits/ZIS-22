@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            function qwe(x,y,z){
+                return (x + (Math.cbrt(z * y)) / (y + Math.cos(x)));
+            }
+            x = parseInt(prompt("введите значение x"));
+            y = parseInt(prompt("введите значение y"));
+            z = parseInt(prompt("введите значение z"));
+            document.write(`<center><span style="font-size:15px;">Исходная формула для расчета (вариант 16):</span></center><br>`);
+            document.write("<center><img src=\"src/01.png\"></center>");
+            b = qwe(x,y,z);
+            
+            document.write("<p>Скрипт разработал слушатель ЗИС-22, Д.Ю.Мицура, b = " + b + "</p>");
+        </script>
+    </body>
+</html>

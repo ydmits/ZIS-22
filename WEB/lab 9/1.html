@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Горизонтальные</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 10px;
+        }
+        hr {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Горизонтальные</h1>
+    <p>Выберите параметры</p>
+    <hr id="customLine" style="width: 270px; height: 25px; background-color: black; border: none;">
+
+    <form id="lineForm">
+        <label for="alignment">Выравнивание:</label>
+        <div id="alignment">
+            <input type="radio" id="left" name="alignment" value="left">
+            <label for="left">Left</label>
+            <input type="radio" id="center" name="alignment" value="center" checked>
+            <label for="center">Center</label>
+            <input type="radio" id="right" name="alignment" value="right">
+            <label for="right">Right</label>
+        </div>
+        
+        <label for="thickness">Толщина линии:</label>
+        <input type="number" id="thickness" name="thickness" value="25">
+
+        <label for="length">Длина линии (px):</label>
+        <input type="number" id="length" name="length" value="270">
+
+        <label for="color">Цвет линии:</label>
+        <select id="color" name="color">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+        </select>
+
+        <button type="button" onclick="applyChanges()">Выполнить</button>
+    </form>
+
+    <script>
+        function applyChanges() {
+            const line = document.getElementById('customLine');
+            const alignment = document.querySelector('input[name="alignment"]:checked').value;
+            const thickness = document.getElementById('thickness').value;
+            const length = document.getElementById('length').value;
+            const color = document.getElementById('color').value;
+
+            line.style.width = length + 'px';
+            line.style.height = thickness + 'px';
+            line.style.backgroundColor = color;
+
+            switch (alignment) {
+                case 'left':
+                    line.style.margin = '20px 0 20px 0';
+                    line.style.marginLeft = '0';
+                    break;
+                case 'center':
+                    line.style.margin = '20px auto';
+                    break;
+                case 'right':
+                    line.style.margin = '20px 0 20px auto';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

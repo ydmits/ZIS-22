@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        <style>
+            .form-field {
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Динамическая форма</h2>
+    <form id="dynamicForm">
+        <div class="form-field">
+            <label for="field1">Поле 1:</label>
+            <input type="text" id="field1" name="field1">
+        </div>
+    </form>
+    <button type="button" onclick="addField()">Добавить поле</button>
+    <button type="button" onclick="removeField()">Удалить поле</button>
+
+    <script>
+        let fieldCount = 1;
+
+        function addField() {
+            fieldCount++;
+            const form = document.getElementById('dynamicForm');
+            const newField = document.createElement('div');
+            newField.classList.add('form-field');
+            newField.innerHTML = `
+                <label for="field${fieldCount}">Поле ${fieldCount}:</label>
+                <input type="text" id="field${fieldCount}" name="field${fieldCount}">
+            `;
+            form.appendChild(newField);
+        }
+
+        function removeField() {
+            if (fieldCount > 1) {
+                const form = document.getElementById('dynamicForm');
+                form.removeChild(form.lastElementChild);
+                fieldCount--;
+            }
+        }
+    </script>
+    </body>
+</html>

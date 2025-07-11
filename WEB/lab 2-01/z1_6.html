@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Условный оператор IF</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.write("<center>Пример нахождения большего числа</center>");
+            a=1;b=22;c=3;
+            if(a>b && a >c) document.write("Большее а = ", a);
+            else if (b>c) document.write("Большее b = ", b);
+            else document.write("Большее c = ", c);
+            Max = (a > b) ? a : b;
+            Max = (Max > c) ? Max : c;
+            document.write("Большее здесь ", Max);
+        </script>
+    </body>
+</html>

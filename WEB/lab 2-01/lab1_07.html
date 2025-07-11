@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            function factorial(n) {
+                if (n === 0) {
+                return 1;
+                } 
+                else {
+                    return n * factorial(n - 1);
+                }
+            }
+            x = parseInt(prompt("Ввод х"))
+            n = parseInt(prompt("Ввод n"))
+            N = 0;
+            sum = 0;
+            do{
+                sum += (((-1) ** n) * (x ** (2 * n))) / (factorial(2 * n + 1));
+                N++
+            }while(n < N)
+            alert(sum);
+  
+        </script>
+    </body>
+</html>

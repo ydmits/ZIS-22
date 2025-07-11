@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            n = 10
+            mass = new Array();
+            for(i = 0; i < n; i++){
+                mass[i] = Math.floor(Math.random() * 100);
+            };
+            for(i = 0; i < n; i++){
+                document.write("mass[", i, "] = ", mass[i], "&nbsp;&nbsp;&nbsp;&nbsp;");
+            };
+            for(elem in mass){
+                document.write(mass[elem],"&nbsp;&nbsp;&nbsp;&nbsp;");
+            };
+            document.write(mass);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        <script>
+            class Battery {
+                constructor(type, capacity, voltage, polarity) {
+                    this.type = type;
+                    this.capacity = capacity;
+                    this.voltage = voltage;
+                    this.polarity = polarity;
+                }
+    
+                
+                getType() {
+                    return this.type;
+                }
+    
+                getCapacity() {
+                    return this.capacity;
+                }
+    
+                getVoltage() {
+                    return this.voltage;
+                }
+    
+                getPolarity() {
+                    return this.polarity;
+                }
+    
+                
+                setType(type) {
+                    this.type = type;
+                }
+    
+                setCapacity(capacity) {
+                    this.capacity = capacity;
+                }
+    
+                setVoltage(voltage) {
+                    this.voltage = voltage;
+                }
+    
+                setPolarity(polarity) {
+                    this.polarity = polarity;
+                }
+    
+                
+                getInfo() {
+                    return `Тип аккумулятора: ${this.type}<br>
+                            Емкость: ${this.capacity}<br>
+                            Напряжение: ${this.voltage}<br>
+                            Полярность: ${this.polarity}`;
+                }
+            }
+            
+            class AdvancedBattery extends Battery {
+            constructor(type, capacity, voltage, polarity, releaseDate, price) {
+                super(type, capacity, voltage, polarity);
+                this.releaseDate = releaseDate;
+                this.price = price;
+            }
+
+            // Геттеры
+            getReleaseDate() {
+                return this.releaseDate;
+            }
+
+            getPrice() {
+                return this.price;
+            }
+
+            
+            setReleaseDate(releaseDate) {
+                this.releaseDate = releaseDate;
+            }
+
+            setPrice(price) {
+                this.price = price;
+            }
+
+            
+            getInfo() {
+                return `Тип аккумулятора: ${this.type}<br>
+                        Емкость: ${this.capacity}<br>
+                        Напряжение: ${this.voltage}<br>
+                        Полярность: ${this.polarity}<br>
+                        Дата выхода на рынок: ${this.releaseDate}<br>
+                        Стоимость: ${this.price}`;
+            }
+        }
+            
+            
+        function performCalculations(batteries) {
+            // макс мин
+            let maxPriceBattery = batteries.reduce((max, battery) => battery.price > max.price ? battery : max, batteries[0]);
+            let minPriceBattery = batteries.reduce((min, battery) => battery.price < min.price ? battery : min, batteries[0]);
+
+            // сумм
+            let totalCost = batteries.reduce((sum, battery) => sum + battery.price, 0);
+
+            // ср
+            let averageCost = totalCost / batteries.length;
+
+            // кол выш ср
+            let countAboveAverage = batteries.filter(battery => battery.price > averageCost).length;
+
+            
+            document.getElementById("max-price").innerHTML = maxPriceBattery.getInfo();
+            document.getElementById("min-price").innerHTML = minPriceBattery.getInfo();
+            document.getElementById("total-cost").innerHTML = `Суммарная стоимость всех объектов: ${totalCost} рублей`;
+            document.getElementById("average-cost").innerHTML = `Средняя стоимость объекта: ${averageCost.toFixed(2)} рублей`;
+            document.getElementById("count-above-average").innerHTML = `Количество объектов со стоимостью выше средней: ${countAboveAverage}`;
+        }
+
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            let batteries = [
+                new AdvancedBattery("Литий-ионный", "3000 мА·ч", "3.7 В", "Прямая", "2024-01-01", 1000),
+                new AdvancedBattery("Никель-металл-гидридный", "2500 мА·ч", "1.2 В", "Обратная", "2023-06-15", 700),
+                new AdvancedBattery("Литий-феррофосфатный", "1500 мА·ч", "3.2 В", "Прямая", "2025-09-30", 1200),
+                new AdvancedBattery("Свинцово-кислотный", "10000 мА·ч", "12 В", "Обратная", "2022-12-20", 500)
+            ];
+
+            performCalculations(batteries);
+        });
+        </script>
+    </head>
+    <body>
+        <h1>Аккумулятор с максимальной стоимостью:</h1>
+        <div id="max-price">
+        
+        </div>
+        <h1>Аккумулятор с минимальной стоимостью:</h1>
+        <div id="min-price">
+        
+        </div>
+
+        <h1>Сводная информация:</h1>
+        <div id="total-cost"></div>
+        <div id="average-cost"></div>
+        <div id="count-above-average"></div>
+    </body>
+</html>

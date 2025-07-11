@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        <script>
+            class Battery {
+                constructor(type, capacity, voltage, polarity) {
+                    this.type = type;
+                    this.capacity = capacity;
+                    this.voltage = voltage;
+                    this.polarity = polarity;
+                }
+    
+                
+                getType() {
+                    return this.type;
+                }
+    
+                getCapacity() {
+                    return this.capacity;
+                }
+    
+                getVoltage() {
+                    return this.voltage;
+                }
+    
+                getPolarity() {
+                    return this.polarity;
+                }
+    
+                
+                setType(type) {
+                    this.type = type;
+                }
+    
+                setCapacity(capacity) {
+                    this.capacity = capacity;
+                }
+    
+                setVoltage(voltage) {
+                    this.voltage = voltage;
+                }
+    
+                setPolarity(polarity) {
+                    this.polarity = polarity;
+                }
+                
+    
+                
+                getInfo() {
+                    return `Тип аккумулятора: ${this.type}<br>
+                            Емкость: ${this.capacity}<br>
+                            Напряжение: ${this.voltage}<br>
+                            Полярность: ${this.polarity}`;
+                }
+            }
+    
+            
+            function displayBatteryInfo(battery) {
+                let batteryInfoDiv = document.getElementById("battery-info");
+                batteryInfoDiv.innerHTML = battery.getInfo();
+            }
+    
+            
+            document.addEventListener("DOMContentLoaded", function() {
+                let myBattery = new Battery("Литий-ионный", "3000 мА·ч", "3.7 В", "Прямая");
+                displayBatteryInfo(myBattery);
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Информация об аккумуляторе</h1>
+    <div id="battery-info"></div>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета переводчика</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        select, button {
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Анкета переводчика</h1>
+    <form id="translatorForm">
+        <label for="languages">Выберите язык</label>
+        <select id="languages" name="languages" multiple size="6">
+            <option value="Белорусский">Белорусский</option>
+            <option value="Английский">Английский</option>
+            <option value="Французский">Французский</option>
+            <option value="Немецкий">Немецкий</option>
+            <option value="Китайский">Китайский</option>
+            <option value="Японский">Японский</option>
+        </select>
+        <button type="button" onclick="processForm()">Отправить</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        function processForm() {
+            const languagePrices = {
+                Белорусский: 100,
+                Английский: 200,
+                Французский: 300,
+                Немецкий: 400,
+                Китайский: 500,
+                Японский: 600
+            };
+
+            const selectedLanguages = Array.from(document.getElementById('languages').selectedOptions).map(option => option.value);
+            let totalReward = 0;
+            let knownLanguages = [];
+
+            if (selectedLanguages.length === 0) {
+                document.getElementById('result').innerText = 'Не выбраны языки - это стоит 0 р.';
+            } else {
+                selectedLanguages.forEach(language => {
+                    totalReward += languagePrices[language];
+                    knownLanguages.push(language.charAt(0).toUpperCase() + language.slice(1));
+                });
+
+                document.getElementById('result').innerText = `Вы знаете ${knownLanguages.join(', ')}. Суммарное вознаграждение ${totalReward} р.`;
+            }
+        }
+    </script>
+</body>
+</html>

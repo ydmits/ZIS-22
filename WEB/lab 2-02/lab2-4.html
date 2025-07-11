@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            arr = new Array();
+            min = 1;
+            max=100;
+            for(i = 0; i < 15; i++){
+                arr[i] = Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            document.write("<br> Сформирован массив: ");
+            document.write(arr);
+            minIndex = 0;
+            for(i = 0; i < 15; i++){
+                if(arr[i]<arr[minIndex]) minIndex = i;
+            }
+            elem = arr[2];
+            arr[2] = arr[minIndex];
+            arr[minIndex] = elem;
+            document.write("<br> Замена (вариант 15: ");
+            document.write(arr);
+        </script>
+    </body>
+</html>

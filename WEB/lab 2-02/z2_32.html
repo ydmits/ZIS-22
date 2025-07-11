@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            function getFactorial(n){
+                var result;
+                if (n > 0){
+                    result = n * getFactorial(n - 1);
+                } else if (n == 0){
+                    result = 1;
+                } else {result == null;}
+                return result;
+            }
+            
+            n = parseInt(prompt("vvedi chislo"));
+            x = getFactorial(n);
+            document.write(x);
+        </script>
+    </body>
+</html>

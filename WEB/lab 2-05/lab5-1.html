@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        <script>
+            let battery = {
+                type: "Литий-ионный",
+                capacity: "3000 мА·ч",
+                voltage: "3.7 В",
+                polarity: "Какая-то",
+
+                getInfo: function() {
+                return `Тип аккумулятора: ${this.type}<br>
+                Емкость: ${this.capacity}<br>
+                Напряжение: ${this.voltage}<br>
+                Полярность: ${this.polarity}`;
+                }
+            };
+            function displayBatteryInfo() {
+                let batteryInfoDiv = document.getElementById("battery-info");
+                batteryInfoDiv.innerHTML = battery.getInfo();
+            }
+            document.addEventListener("DOMContentLoaded", displayBatteryInfo);
+        </script>
+    </head>
+    <body>
+        <h1>Информация об аккумуляторе</h1>
+        <div id="battery-info"></div>
+    </body>
+</html>

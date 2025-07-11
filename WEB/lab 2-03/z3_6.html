@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        <script lang="JavaScript">
+          var k = 1;
+          function ref(){k = 6;}
+          function sup(){
+            var d = document;
+            if(k>=5){
+              if(k==1){d.mypict.src="src\\01.jpg"; k++;}
+              else if(k==2){d.mypict.src="src\\02.png"; k++;}
+              else if(k==3){d.mypict.src="src\\03.gif"; k++;}
+              else if(k==4){d.mypict.src="src\\04.png"; k++;}
+              else if(k==5){d.mypict.src="src\\05.jpg"; k++;}
+              setTimeout("sup()", 1000);
+            }
+          }
+        </script>
+    </head>
+    <body onload="sup()">        
+      <p>Просмотр рисунков</p>
+      <img src="src\\01.jpg" name="mypict" width="200">
+      <form>
+        <input type="reset" value="stop" onclick="ref()">
+        <input type="button" value="try again" onclick="k=1; sup()">
+      </form>
+    </body>
+</html>

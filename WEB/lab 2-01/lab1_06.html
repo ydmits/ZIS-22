@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            var d = document; 
+            d.addEventListener('DOMContentLoaded', () => {
+            let table = d.createElement('table'); 
+            for (let tr, r = 0; r < 10; r++) {
+                tr = table.insertRow();  
+                for (let td, val, c = 1; c <= 10 ; c++) {
+                    td  = tr.insertCell(); 
+                    val = r * 10 + c; 
+                    td.textContent = val;
+                    if (Math.sqrt(8 * val + 1) % 1 === 0) 
+                    td.style.color = 'red';
+                    td.style.padding = '5px'; 
+                    td.style.border  = '1px solid black';
+                    }
+            }
+            table.style.borderCollapse = 'collapse';
+            table.style.textAlign = 'center'; 
+            d.body.appendChild(table); 
+        }); 
+        </script>
+    </body>
+</html>

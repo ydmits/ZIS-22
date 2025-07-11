@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>qwery</title>
+    </head>
+    <body>
+        <script>
+            var num = Math.random() * 100;
+            num = Math.floor(num);
+            var f = true;
+            var n;
+            var count = 0;
+            document 
+            t = confirm("Play?");
+            if(t){
+                while(f){
+                    n = parseInt(prompt("number"));
+                    count++;
+                    if (n == num){
+                        alert("y win\n for" + count);
+                        f = false;
+                    }
+                    else if (n > num){
+                        alert("no min");
+                    }
+                    else alert("no max");
+                }
+            }
+            else alert("okay");
+        </script>
+    </body>
+</html>

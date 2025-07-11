@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Записная книжка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form, table {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        label, input, button, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Записная книжка</h2>
+    <form id="notebookForm">
+        <input type="hidden" name="id" value="0">
+        <label for="name">Фамилия и имя:</label>
+        <input name="name" required>
+
+        <label for="city">Город:</label>
+        <input name="city">
+
+        <label for="address">Адрес:</label>
+        <input name="address">
+
+        <label for="dob">Дата рождения (гггг-мм-дд):</label>
+        <input name="dob" type="date">
+
+        <label for="email">E-mail:</label>
+        <input name="email" type="email" required>
+
+        <button type="submit">Сохранить</button>
+        <button type="button" id="reset">Сбросить</button>
+    </form>
+    <table>
+        <thead>
+            <tr><th>Id</th><th>Фамилия и имя</th><th>Город</th><th>Адрес</th><th>Дата рождения</th><th>E-mail</th><th>Удалить</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.forms["notebookForm"];
+            const tbody = document.querySelector("tbody");
+
+            function fetchEntries() {
+                fetch("/api/entries")
+                    .then(response => response.json())
+                    .then(entries => {
+                        tbody.innerHTML = "";
+                        entries.forEach(entry => {
+                            const row = tbody.insertRow();
+                            row.insertCell(0).innerText = entry.id;
+                            row.insertCell(1).innerText = entry.name;
+                            row.insertCell(2).innerText = entry.city;
+                            row.insertCell(3).innerText = entry.address;
+                            row.insertCell(4).innerText = entry.dob;
+                            row.insertCell(5).innerText = entry.email;
+                            const deleteCell = row.insertCell(6);
+                            const deleteButton = document.createElement("button");
+                            deleteButton.innerText = "Удалить";
+                            deleteButton.onclick = () => deleteEntry(entry.id);
+                            deleteCell.appendChild(deleteButton);
+                        });
+                    });
+            }
+
+            function deleteEntry(id) {
+                fetch(`/api/entries/${id}`, {
+                    method: "DELETE"
+                }).then(fetchEntries);
+            }
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const formData = new FormData(form);
+                const entry = {};
+                formData.forEach((value, key) => {
+                    entry[key] = value;
+                });
+                fetch("/api/entries", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(entry)
+                }).then(response => response.json())
+                  .then(() => {
+                      form.reset();
+                      fetchEntries();
+                  });
+            });
+
+            document.getElementById("reset").addEventListener("click", function () {
+                form.reset();
+            });
+
+            fetchEntries();
+        });
+    </script>
+</body>
+</html>

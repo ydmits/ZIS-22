@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            treug = new Array();
+            kvd = new Array();
+            rez = new Array();
+            for(i = 1; i < 11; i++){
+                treug[i] = i * (i + 1) / 2;
+                kvd[i] = i * i;
+            }
+            document.write("<br> Треугольные числа: ");
+            for(i = 1; i < 11; i++) document.write(treug[i] + "  ");
+            document.write("<br> Квадратные числа: ");
+            document.write(kvd);
+            rez = treug.concat(kvd);
+            rez.sort((a,b) => a - b);
+            document.write("<br> Объединение: ");
+            document.write(rez);
+            rez.reverse();
+            document.write("<br> Обратная сортировка: ");
+            document.write(rez);
+        </script>
+    </body>
+</html>

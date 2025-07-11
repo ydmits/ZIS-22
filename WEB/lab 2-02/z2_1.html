@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            var today = new Date();
+            var hours = today.getHours();
+            var miinute = today.getMinutes();
+            if(miinute < 10) miinute = '0' + miinute;
+            if(hours < 12) var time12 = hours + ':' + miinute + ' am';
+            else var time12 = hours - 12 + ':' + miinute + ' pm';
+            document.write('текцщее время - ', time12);
+        </script>
+    </body>
+</html>

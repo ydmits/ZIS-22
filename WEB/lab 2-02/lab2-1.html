@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            function WeekDay(size, day, color) {
+            document.write(`<span style="font-size:${size}px; color:${color};">${day}</span><br>`);
+        }        
+        const days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
+        const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+        let size = 7;
+        for (i = 0; i < days.length; i++) {
+            WeekDay(size * 10, days[i], colors[i]);
+            size--;
+        }
+        </script>
+    </body>
+</html>

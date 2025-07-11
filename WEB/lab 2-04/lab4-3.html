@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+        
+    </head>
+    <body>
+        <button onclick="manipulateString()">Ввод строки</button>
+        <p id="originalString"></p>
+        <p id="modifiedString"></p>
+        <script>
+            function manipulateString() {
+                let str = prompt("Введите строку:");
+                if (str === null || str === "") {
+                alert("Строка не введена");
+                return;
+            }
+
+
+        document.getElementById('originalString').textContent = "Введена строка: " + str;
+
+
+        let modifiedStr = str.split('').map(char => {
+        if (char.match(/[а-яё]/i)) {
+            if (char === 'я') return 'а';
+            if (char === 'Я') return 'А';
+            if (char === 'ё') return 'ж';  
+            if (char === 'Ё') return 'Ж';
+            return String.fromCharCode(char.charCodeAt(0) + 1);
+        }
+        return char;
+        }).join('');
+
+
+        document.getElementById('modifiedString').textContent = "Измененная строка: " + modifiedStr;
+        }
+
+        </script>
+    </body>
+</html>

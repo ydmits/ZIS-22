@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.w3.org/1999/xhtml/">
+    <head>
+        <meta charset="utf-8" />
+        <title>Дмитрий Мицура</title>
+    </head>
+    <body>
+        <script>
+            fruits = ['apple', 'pineapple', 'mango', 'melon', 'grape'];
+            citrus = ['orange', 'lemon', 'lime'];            
+            document.write("<br> Массив frutis ");
+            document.write(fruits);
+            document.write("<br> Массив citrus ");
+            document.write(citrus);
+            document.write("<br> Объединенный массив frutis ");
+            fruits.concat(citrus);
+            document.write(fruits);
+            document.write("<br> Массив frutis, где вставлены новые элементы ");
+            newElems = ['pear', 'cherry', 'plum', 'rasberry', 'strawberry'];
+            fruits.splice(3,0,...newElems);
+            document.write(fruits);
+            document.write("<br> Массив frutis, где 3 последних элемента удалены");
+            fruits.splice(-3);
+            document.write(fruits);
+            document.write("<br> Массив frutis отсортирован в алфавитном порядке ");
+            fruits.sort();
+            document.write(fruits);
+            document.write("<br> Массив frutis отсортирован в обратном алфавитном порядке ");
+            fruits.reverse();
+            document.write(fruits);
+            document.write("<br> Массив frutis отсортирован по длине слова ");
+            fruits.sort((a, b) => a.length - b.length);
+            document.write(fruits);
+        </script>
+    </body>
+</html>
