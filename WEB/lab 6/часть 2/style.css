@@ -1,0 +1,12 @@
+h1 {color: violet; text-align: center;}
+h2 {text-align: center;}
+h3 {text-decoration: underline;}
+ol {line-height: 1.5;}
+#podch {text-decoration: underline;}
+#kurs {font-style: italic;}
+#spisok {font-family: Verdana; text-decoration: underline; letter-spacing: 0.5em;}
+#marker {list-style-image: url(elem.jpg); line-height: 1.5;}
+#tabl0 {background: #a52a2a;}
+#tabl1 {background: #fffff0;}
+#tabl2 {background: #fff8dc;}
+#tab {width: 100px; height:100px; border: solid 1px silver; text-align:center;}

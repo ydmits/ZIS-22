@@ -1,0 +1,61 @@
+<html>
+<head>
+        <title>Лаб 7</title>
+	<meta charset="utf-8">
+</head>
+    <body><font size="4">
+	 <form action="">
+		<table border="1" cellpadding="5">
+			<caption align="left">
+				<b>Анкета соискателя</b>
+			</caption>
+			<tr>
+				<td>* E-mail</td>
+				<td><input type="email" required name="email"></td>
+			</tr>
+			<tr>
+				<td>* ФИО</td>
+				<td><input type="text" required name="FIO"></td>
+			</tr>
+			<tr>
+				<td>* Контактный телефон</td>
+				<td><input type="tel" required name="phone"></td>
+			</tr>
+			<tr>
+				<td>Пол</td>
+				<td>
+					<input type="radio" name="gender" id="g1" value="1">
+					<label for="g1">Мужчина</label>
+					<input type="radio" name="gender" id="g2" value="2">
+					<label for="g2">Женщина</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Дата рождения</td>
+				<td><input type="date" id="date" name="date"/></td>
+			</tr>
+			<tr>
+				<td>Сфера поиска вакансий</td>
+				<td>
+					<input type="checkbox" name="name" value="torg">Торговля<br>
+					<input type="checkbox" name="name" value="trans">Транспорт<br>
+					<input type="checkbox" name="name" value="prom">Промышленность<br>
+					<input type="checkbox" name="name" value="obr">Образование<br>
+					<input type="checkbox" name="name" value="eko">Экология<br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<textarea name="description" cols="40" rows="10">Коротко о себе</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Отправить">
+					<button type="reset">Сбросить</button>
+				</td>
+			</tr>
+		</table>
+	 </form>
+    </font></body>
+</html>

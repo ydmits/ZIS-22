@@ -1,0 +1,8 @@
+h1 {color: violet; text-align: center;}
+h2 {text-align: center;}
+h3 {text-decoration: underline;}
+ol {line-height: 1.5;}
+#podch {text-decoration: underline;}
+#kurs {font-style: italic;}
+#spisok {font-family: Verdana; text-decoration: underline; letter-spacing: 0.5em;}
+#marker {list-style-image: url(elem.jpg); line-height: 1.5;}
