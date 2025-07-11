@@ -1,0 +1,21 @@
+﻿<Window x:Class="KP_Mitsura.Window_Read_Message"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KP_Mitsura"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Width="1000" Height="600"
+        MinWidth="1000" MinHeight="600"
+        Title="Смоттеть сообщения" Icon="/icon1.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.25*"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0" x:Name="gridUsersTable" IsReadOnly="True">
+        </DataGrid>
+        <Button Grid.Row="1" Content="Закрыть"  Cursor="Hand"  HorizontalAlignment="Right" Margin="15" MinWidth="400" MaxWidth="550" Click="Button_Close_Click"/>
+    </Grid>
+</Window>

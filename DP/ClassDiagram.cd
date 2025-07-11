@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="KP_Mitsura.Crypt" Collapsed="true">
+    <Position X="0.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crypt.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainWindow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KP_Mitsura.authUser" Collapsed="true">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAKAAAAEAAAABAAEAAAAAAAAABAAEgA=</HashCode>
+      <FileName>authUser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainWindow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KP_Mitsura.Correct_Str" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Correct_Str.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainWindow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KP_Mitsura.DB" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQAAAAAAAAAAAFAAAAAAAQAAAAAAAAAAAABAA=</HashCode>
+      <FileName>DB.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainWindow" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="KP_Mitsura.CustomOpenFileDialog" Collapsed="true">
+    <Position X="2" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABQiAAABAAAAAAAAAAAEAQAEAgAAAAIgAAAAEKAABAA=</HashCode>
+      <FileName>CustomOpenFileDialog.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.MainWindow" Collapsed="true">
+    <Position X="6" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAIAAAAAAACAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Window_Admin" />
+      <Property Name="Window_User" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Win_Meaasge_Box" Collapsed="true">
+    <Position X="0.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Win_Meaasge_Box.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainWindow" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_Admin" Collapsed="true">
+    <Position X="4.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACEAAAAAgBACQAAQAAAAAAAAACAAEEAAiABAAAAAA=</HashCode>
+      <FileName>Window_Admin.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CustomOpenFileDialog" />
+      <Property Name="Window_Edit_Dictionary" />
+      <Property Name="Window_List_Users" />
+      <Property Name="Window_New_Catalog_Name" />
+      <Property Name="Window_Edit_Message" />
+      <Property Name="Window_Logs" />
+      <Property Name="Window_Edit_Users" />
+      <Property Name="Window_Edit_Catalog" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_Edit_Catalog" Collapsed="true">
+    <Position X="2" Y="17.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="KP_Mitsura.Window_Edit_Catalog.FileSystemItem" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Window_Edit_Catalog.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="KP_Mitsura.Window_Edit_Catalog.DictionaryItem" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Window_Edit_Catalog.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ARBYAEiAgAABgQAAiAAoAACDDQAAgACqAVQAAgMARBg=</HashCode>
+      <FileName>Window_Edit_Catalog.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_Edit_Dictionary" Collapsed="true">
+    <Position X="2" Y="11.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAIAAABAABBAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Window_Edit_Dictionary.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_Edit_Message" Collapsed="true">
+    <Position X="2" Y="14.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAgACAIAAhAABIAAAAAAAAAAAAACAAAQAAAAACAAQ=</HashCode>
+      <FileName>Window_Edit_Message.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_Edit_Users" Collapsed="true">
+    <Position X="2" Y="16.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAABAAAAAgEAAAAAAAAAAAAQAAAAAAAACAA=</HashCode>
+      <FileName>Window_Edit_Users.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_List_Users" Collapsed="true">
+    <Position X="2" Y="12.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Window_List_Users.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_Logs" Collapsed="true">
+    <Position X="2" Y="15.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Window_Logs.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_New_Catalog_Name" Collapsed="true">
+    <Position X="2" Y="13.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Window_New_Catalog_Name.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_Read_Catalog" Collapsed="true">
+    <Position X="10" Y="12" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="KP_Mitsura.Window_Read_Catalog.FileSystemItem" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Window_Read_Catalog.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+      <Struct Name="KP_Mitsura.Window_Read_Catalog.DictionaryItem">
+        <TypeIdentifier>
+          <NewMemberFileName>Window_Read_Catalog.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ARAYAAAAAAABgQAACAAgAQCDBAAAAASiARABAgEAQBA=</HashCode>
+      <FileName>Window_Read_Catalog.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_Read_Message" Collapsed="true">
+    <Position X="10" Y="11" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Window_Read_Message.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_User" Collapsed="true">
+    <Position X="7.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAABAAAAAAAAAQAAAAAAAAAAAACAAAAAgAg=</HashCode>
+      <FileName>Window_User.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Window_User_Message" />
+      <Property Name="Window_Read_Message" />
+      <Property Name="Window_Read_Catalog" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="KP_Mitsura.Window_User_Message" Collapsed="true">
+    <Position X="10" Y="10" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Window_User_Message.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9.16" />
+</ClassDiagram>
