@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "svp_lab_1_var_1/1.0.0": {
+        "runtime": {
+          "svp_lab_1_var_1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "svp_lab_1_var_1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
